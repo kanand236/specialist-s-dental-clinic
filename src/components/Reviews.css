@@ -1,0 +1,33 @@
+.reviews {
+  background: var(--mint-100);
+}
+
+.reviews__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.reviews__item {
+  display: grid;
+  align-content: space-between;
+  gap: 1.25rem;
+  padding: 1.75rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+}
+
+.reviews__item blockquote {
+  font-size: 1.0625rem;
+}
+
+.reviews__item figcaption {
+  display: grid;
+  color: var(--ink-soft);
+  font-size: 0.9375rem;
+}
+
+.reviews__item strong {
+  color: var(--ink);
+}

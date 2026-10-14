@@ -1,0 +1,129 @@
+.shade {
+  display: grid;
+  justify-items: center;
+  gap: 1.25rem;
+}
+
+.shade__stage {
+  display: grid;
+  place-items: center;
+  width: min(100%, 400px);
+  aspect-ratio: 1;
+  background: var(--mint-200);
+  border-radius: 58% 42% 55% 45% / 48% 52% 48% 52%;
+}
+
+.shade__tooth {
+  width: 52%;
+  height: auto;
+  filter: drop-shadow(0 18px 18px rgba(11, 60, 62, 0.2));
+  animation: tooth-in 0.9s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+.shade__fill {
+  transition: fill 0.35s ease;
+}
+
+@keyframes tooth-in {
+  from {
+    opacity: 0;
+    transform: translateY(-28px) rotate(-4deg);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.shade__panel {
+  display: grid;
+  gap: 1rem;
+  width: min(100%, 400px);
+  padding: 1.25rem 1.5rem 1.5rem;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-m);
+}
+
+.shade__head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.shade__label {
+  font-weight: 600;
+}
+
+.shade__code {
+  color: var(--teal-900);
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.shade__range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 12px;
+  background: linear-gradient(90deg, #d3bf8e, #faf8f1);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+}
+
+.shade__range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 28px;
+  height: 28px;
+  background: var(--teal-900);
+  border: 4px solid var(--paper);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--teal-900);
+}
+
+.shade__range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: var(--teal-900);
+  border: 4px solid var(--paper);
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px var(--teal-900);
+}
+
+.shade__ticks {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.25rem;
+}
+
+.shade__tick {
+  min-width: 44px;
+  min-height: 36px;
+  padding: 0.25rem 0.4rem;
+  background: transparent;
+  border: 0;
+  border-radius: var(--radius-s);
+  color: var(--ink-soft);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.shade__tick:hover {
+  background: var(--mint-100);
+}
+
+.shade__tick[aria-pressed='true'] {
+  background: var(--teal-900);
+  color: #fff;
+}
+
+.shade__note {
+  color: var(--ink-soft);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}

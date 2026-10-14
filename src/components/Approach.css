@@ -1,0 +1,41 @@
+.approach__grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(2rem, 6vw, 6rem);
+  align-items: start;
+}
+
+.approach h2 {
+  color: #fff;
+}
+
+.approach__item {
+  display: grid;
+  gap: 0.35rem;
+  padding-block: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.approach__item:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.approach__item dt {
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.approach__item dd {
+  max-width: 52ch;
+  color: #bfd9d4;
+}
+
+@media (max-width: 860px) {
+  .approach__grid {
+    grid-template-columns: 1fr;
+  }
+}

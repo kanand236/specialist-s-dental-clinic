@@ -1,0 +1,27 @@
+:root {
+  /* Colour */
+  --porcelain: #f3f8f7;
+  --paper: #ffffff;
+  --mint-100: #e4f3ef;
+  --mint-200: #cfeae4;
+  --teal-500: #1c8a8a;
+  --teal-700: #0f5b5e;
+  --teal-900: #0b3c3e;
+  --sun: #ffc83d;
+  --sun-deep: #f2b01e;
+  --ink: #12292b;
+  --ink-soft: #4a6264;
+  --line: #d3e4e0;
+  --field: #6e918d;
+  --error: #b3261e;
+
+  /* Type */
+  --font-display: 'Bricolage Grotesque', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Public Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  /* Shape */
+  --radius-s: 10px;
+  --radius-m: 18px;
+  --radius-l: 32px;
+  --radius-pill: 999px;
+}

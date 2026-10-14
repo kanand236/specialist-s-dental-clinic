@@ -1,0 +1,47 @@
+.contact {
+  display: grid;
+  justify-items: start;
+  gap: 1.5rem;
+}
+
+.contact__list {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.contact__list li {
+  display: flex;
+  gap: 0.9rem;
+  align-items: flex-start;
+}
+
+.contact__list svg {
+  width: 22px;
+  height: 22px;
+  margin-top: 0.2rem;
+  flex: none;
+  color: var(--teal-700);
+}
+
+.contact__list address {
+  display: grid;
+  font-style: normal;
+}
+
+.contact__list a {
+  font-weight: 600;
+  text-underline-offset: 4px;
+}
+
+.contact__hours {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.contact__hours dt {
+  font-weight: 600;
+}
+
+.contact__hours dd {
+  color: var(--ink-soft);
+}

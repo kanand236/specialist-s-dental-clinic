@@ -1,0 +1,73 @@
+.visit__steps {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.visit__step {
+  position: relative;
+}
+
+/* Line that joins one step to the next */
+.visit__step:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  top: 21px;
+  left: 56px;
+  right: -1.5rem;
+  height: 2px;
+  background: var(--line);
+}
+
+.visit__num {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  background: var(--teal-900);
+  border-radius: 50%;
+  color: #fff;
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.visit__body {
+  display: grid;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.visit__body p {
+  color: var(--ink-soft);
+  font-size: 0.9688rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 1000px) {
+  .visit__steps {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .visit__step {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    column-gap: 1.25rem;
+    padding-bottom: 2rem;
+  }
+
+  .visit__step:not(:last-child)::before {
+    top: 50px;
+    bottom: 6px;
+    left: 21px;
+    right: auto;
+    width: 2px;
+    height: auto;
+  }
+
+  .visit__body {
+    margin-top: 0.25rem;
+  }
+}

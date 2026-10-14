@@ -1,0 +1,113 @@
+.services__layout {
+  display: grid;
+  grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: start;
+}
+
+.services__tabs {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.services__tab {
+  padding: 1rem 1.1rem;
+  background: transparent;
+  border: 0;
+  border-left: 4px solid var(--line);
+  border-radius: 0 var(--radius-s) var(--radius-s) 0;
+  color: var(--ink-soft);
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.services__tab:hover {
+  background: var(--mint-100);
+}
+
+.services__tab[aria-selected='true'] {
+  background: var(--mint-100);
+  border-left-color: var(--teal-700);
+  color: var(--teal-900);
+}
+
+.services__panel {
+  display: grid;
+  gap: 1.5rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-l);
+}
+
+.services__summary {
+  color: var(--ink-soft);
+  font-size: 1.125rem;
+}
+
+.services__cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.services__sub {
+  margin-bottom: 0.75rem;
+  color: var(--teal-900);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.services__list li {
+  display: flex;
+  gap: 0.65rem;
+  padding-block: 0.35rem;
+}
+
+.services__list svg {
+  width: 20px;
+  height: 20px;
+  margin-top: 0.2rem;
+  flex: none;
+  color: var(--teal-500);
+}
+
+.services__book {
+  justify-self: start;
+}
+
+@media (max-width: 860px) {
+  .services__layout {
+    grid-template-columns: 1fr;
+  }
+
+  .services__tabs {
+    display: flex;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+    overflow-x: auto;
+  }
+
+  .services__tab {
+    flex: none;
+    border: 1px solid var(--line);
+    border-radius: var(--radius-pill);
+    white-space: nowrap;
+  }
+
+  .services__tab[aria-selected='true'] {
+    background: var(--teal-900);
+    border-color: var(--teal-900);
+    color: #fff;
+  }
+
+  .services__cols {
+    grid-template-columns: 1fr;
+  }
+}
